@@ -84,6 +84,8 @@ app.get("/login/github/callback", async (req, res) => {
     }
   })
     console.log("response: "+response);
+  console.log("response scope: "+response.data.scope);
+  console.log("response token type: "+response.data.token_type);
     access_token = response.data.access_token;
     console.log("access 1: "+access_token);
     console.log("Result: "+response.data)
