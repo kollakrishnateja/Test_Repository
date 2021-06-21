@@ -91,6 +91,7 @@ app.get("/login/github/callback", async (req, res) => {
   
   console.log("access out: "+access_token);
   const user = await fetchGitHubUser(access_token);
+  console.log("userData: "+JSON.stringify(user, null, 2));
   if (user) {
     req.session.access_token = access_token;
     req.session.githubId = user.id;
