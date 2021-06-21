@@ -86,8 +86,7 @@ app.get("/login/github/callback", async (req, res) => {
     console.log("response: "+response);
     access_token = response.data.access_token;
     console.log("access 1: "+access_token);
-    const result = await response.json();
-    console.log("Result: "+result)
+    console.log("Result: "+response.data)
   
   
   console.log("access out: "+access_token);
@@ -105,8 +104,7 @@ app.get("/login/github/callback", async (req, res) => {
 
 app.get("/admin", async (req, res) => {
   if (req.session) {
-    const result1 = await req.json();
-    console.log("Result1: "+ result1);
+    console.log("Result1: "+ req.data);
     res.send("Hello Kevin <pre>" + JSON.stringify(req.session, null, 2));
     // Possible use "fetchGitHubUser" with the access_token
   } else {
