@@ -1,3 +1,5 @@
-# test-06
+# Node.js authentication with GitHub Oauth
 
-https://www.loginradius.com/blog/async/oAuth-implemenation-using-node/
+Read the blogpost on how to implement this step by step
+
+https://www.kevinsimper.dk/posts/how-to-make-authentication-with-github-apps-for-side-projects
